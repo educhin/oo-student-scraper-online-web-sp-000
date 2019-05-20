@@ -26,7 +26,7 @@ class Scraper
       :twitter=>links.select{|link| link.include?("twitter")}[0],
       :linkedin=>links.select{|link| link.include?("linkedin")}[0],
       :github=>links.select{|link| link.include?("github")}[0],
-      :blog=>[3],
+      :blog=>links[3],
       :profile_quote=>html.css(".profile-quote").text,
       :bio=> html.css("p").text
     }
